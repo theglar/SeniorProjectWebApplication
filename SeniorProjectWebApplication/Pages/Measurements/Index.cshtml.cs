@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SeniorProjectWebApplication.Models;
+using SeniorProjectWebApplication.Data;
 
 namespace SeniorProjectWebApplication.Pages.Measurements
 {
     public class IndexModel : PageModel
     {
-        private readonly SeniorProjectWebApplication.Models.SeniorProjectWebApplicationContext _context;
+        private readonly SeniorProjectWebApplication.Data.SeniorProjectWebApplicationContext _context;
 
-        public IndexModel(SeniorProjectWebApplication.Models.SeniorProjectWebApplicationContext context)
+        public IndexModel(SeniorProjectWebApplication.Data.SeniorProjectWebApplicationContext context)
         {
             _context = context;
         }

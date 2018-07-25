@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using SeniorProjectWebApplication.Models;
+using SeniorProjectWebApplication.Data;
 using System;
 
 namespace SeniorProjectWebApplication.Migrations
@@ -20,7 +20,7 @@ namespace SeniorProjectWebApplication.Migrations
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("SeniorProjectWebApplication.Models.Measurement", b =>
+            modelBuilder.Entity("SeniorProjectWebApplication.Data.Measurement", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();

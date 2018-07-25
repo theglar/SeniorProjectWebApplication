@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace SeniorProjectWebApplication.Models
+namespace SeniorProjectWebApplication.Data
 {
     public class SeniorProjectWebApplicationContext : DbContext
     {
@@ -13,6 +13,6 @@ namespace SeniorProjectWebApplication.Models
         {
         }
 
-        public DbSet<SeniorProjectWebApplication.Models.Measurement> Measurement { get; set; }
+        public DbSet<SeniorProjectWebApplication.Data.Measurement> Measurement { get; set; }
     }
 }

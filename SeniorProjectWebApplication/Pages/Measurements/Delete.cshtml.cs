@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SeniorProjectWebApplication.Models;
+using SeniorProjectWebApplication.Data;
 
 namespace SeniorProjectWebApplication.Pages.Measurements
 {
     public class DeleteModel : PageModel
     {
-        private readonly SeniorProjectWebApplication.Models.SeniorProjectWebApplicationContext _context;
+        private readonly SeniorProjectWebApplication.Data.SeniorProjectWebApplicationContext _context;
 
-        public DeleteModel(SeniorProjectWebApplication.Models.SeniorProjectWebApplicationContext context)
+        public DeleteModel(SeniorProjectWebApplication.Data.SeniorProjectWebApplicationContext context)
         {
             _context = context;
         }

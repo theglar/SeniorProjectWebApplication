@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SeniorProjectWebApplication.Data;
 using SeniorProjectWebApplication.Services;
-using SeniorProjectWebApplication.Models;
+using SeniorProjectWebApplication.Data;
 
 namespace SeniorProjectWebApplication
 {
@@ -27,11 +27,11 @@ namespace SeniorProjectWebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
+            //services.AddDbContext<SeniorProjectWebApplicationContext>(options =>
             //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<SeniorProjectWebApplicationContext>()
                 .AddDefaultTokenProviders();
 
             services.AddMvc()
