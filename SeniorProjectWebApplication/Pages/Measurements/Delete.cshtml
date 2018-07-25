@@ -1,0 +1,46 @@
+﻿@page
+@model SeniorProjectWebApplication.Pages.Measurements.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Measurement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Measurement.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Measurement.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Measurement.SessionNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Measurement.SessionNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Measurement.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Measurement.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Measurement.Pressure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Measurement.Pressure)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Measurement.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

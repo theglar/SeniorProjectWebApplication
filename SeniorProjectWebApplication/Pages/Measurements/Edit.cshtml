@@ -1,0 +1,50 @@
+﻿@page
+@model SeniorProjectWebApplication.Pages.Measurements.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Measurement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Measurement.ID" />
+            <div class="form-group">
+                <label asp-for="Measurement.UserName" class="control-label"></label>
+                <input asp-for="Measurement.UserName" class="form-control" />
+                <span asp-validation-for="Measurement.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Measurement.SessionNumber" class="control-label"></label>
+                <input asp-for="Measurement.SessionNumber" class="form-control" />
+                <span asp-validation-for="Measurement.SessionNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Measurement.Date" class="control-label"></label>
+                <input asp-for="Measurement.Date" class="form-control" />
+                <span asp-validation-for="Measurement.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Measurement.Pressure" class="control-label"></label>
+                <input asp-for="Measurement.Pressure" class="form-control" />
+                <span asp-validation-for="Measurement.Pressure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
