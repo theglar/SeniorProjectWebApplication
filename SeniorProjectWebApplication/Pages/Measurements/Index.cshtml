@@ -2,53 +2,72 @@
 @model SeniorProjectWebApplication.Pages.Measurements.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "History";
 }
 
-<h2>Index</h2>
+<h2>History</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        <select asp-for="UserName" asp-items="Model.Users">
+            <option value="">All</option>
+        </select>
+
+        User Name: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" /> |
+        <a asp-page="Index" asp-route-SearchString="">Cancel</a>
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Measurement[0].UserName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Measurement[0].SessionNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Measurement[0].Date)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Measurement[0].Pressure)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Measurement[0].UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Measurement[0].SessionNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Measurement[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Measurement[0].Pressure)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Measurement) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SessionNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pressure)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Measurement)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SessionNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pressure)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-block btn-default">Edit</a> 
+                    </td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-block btn-info">Details</a> 
+                    </td>
+                <td>
+                    <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-block btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+

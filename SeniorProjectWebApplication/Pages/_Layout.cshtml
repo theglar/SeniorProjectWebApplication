@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SeniorProjectWebApplication</title>
+    <title>@ViewData["Title"] - Measurement</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">SeniorProjectWebApplication</a>
+                <a asp-page="/Measurements/Index" class="navbar-brand">History</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -42,7 +42,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - SeniorProjectWebApplication</p>
+            <p>&copy; 2018 - SeniorProjectWebApplication</p>
         </footer>
     </div>
 
@@ -65,6 +65,13 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/globalize/lib/globalize.js"></script>
+        <script src="~/lib/devextreme/js/dx.all.js"></script>
+        <script src="~/lib/devextreme-aspnet-data/js/dx.aspnet.data.js"></script>
+
+        <link rel="stylesheet" href="~/lib/devextreme/css/dx.common.css" />
+        <link rel="stylesheet" href="~/lib/devextreme/css/dx.light.compact.css" />
     </environment>
 
     @RenderSection("Scripts", required: false)

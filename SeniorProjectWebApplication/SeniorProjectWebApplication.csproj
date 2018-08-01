@@ -4,7 +4,9 @@
     <UserSecretsId>aspnet-SeniorProjectWebApplication-85EBD13E-0E8F-4D9A-B919-11B592DFD4CE</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="DevExtreme.AspNet.TagHelpers" Version="15.2.11" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="1.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
   </ItemGroup>

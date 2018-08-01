@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model SeniorProjectWebApplication.Pages.Measurements.DeleteModel
 
 @{
@@ -37,7 +37,7 @@
             @Html.DisplayFor(model => model.Measurement.Pressure)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="Measurement.ID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
